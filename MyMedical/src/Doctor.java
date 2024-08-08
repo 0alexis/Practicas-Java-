@@ -3,35 +3,11 @@ import java.util.Date;
 import java.util.Scanner;
 
 
-public class Doctor {
-    static int id = 0;
-    private String name;
-    private String email;
+public class Doctor extends Users{
+   //atributos propios de doctor
     private String speciality;
 
-    public static int getId() {
-        return id;
-    }
 
-    public static void setId(int id) {
-        Doctor.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public String getSpeciality() {
         return speciality;
@@ -41,27 +17,16 @@ public class Doctor {
         this.speciality = speciality;
     }
 
-    Doctor(){
-    System.out.println(" ");
-        }
     Doctor(String name, String email, String speciality){
+  super(name, email);
 
-        System.out.println("El nombre del doctor asignado es: " + name);
-id++;
-      this.name = name;
-      this.email = email;
+       // System.out.println("El nombre del doctor asignado es: " + name);
+
       this.speciality = speciality;
 
     }
 
 //comportamientos
-    public void ShowName(){
-        System.out.println("Nombre Doctor " + name);
-
-    }
-    public void ShowId(){
-    System.out.println("ID doctor:" + id);
-    }
 
     public void ShowSpeciality(){
     System.out.println("Su especialidad es: " + speciality);
@@ -113,5 +78,10 @@ id++;
         public void setTime(String time) {
             this.time = time;
         }
+    }
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: "+ speciality;
+
     }
 }
