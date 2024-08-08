@@ -31,6 +31,9 @@ public class UsoEmpleado {
         //metodo para agregar un dato en cierto lugar
         ListaEmpleados.add(1, new Empleado("emma", 23, 4500));
 
+        //ListaEmpleados.set(3, new Empleado("camilo", 45, 2200));
+
+
         //cortar el exceso de mem cuando sobran espacios de los previstos
         ListaEmpleados.trimToSize();
 
@@ -44,7 +47,7 @@ public class UsoEmpleado {
         // }
 
 
-        //ciclo for para imprimir datos desde principio a fin
+        //ciclo for i para imprimir datos desde principio a fin
         for (int i = 0; i < ListaEmpleados.size(); i++) {
             Empleado e = ListaEmpleados.get(i);{
                 System.out.println(e.DameDato());
